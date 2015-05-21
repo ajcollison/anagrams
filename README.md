@@ -7,6 +7,8 @@ can be specified - the default minimum length being 4.
 
 NOTE: Written for python 3
 
+TODO: More testing/better handling of non-ascii input files
+
 Examples
 --------
 
