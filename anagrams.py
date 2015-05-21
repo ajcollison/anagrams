@@ -152,7 +152,7 @@ def _main():
 
     anagrams = collect_anagrams(handle, min_word_length=args.minlength)
     for alist in filter_anagrams(anagrams, match_word_length=args.nomatch):
-        print(", ".join(list(alist)).rstrip())
+        print(", ".join(sorted(list(alist))).rstrip())
 
 
 if __name__ == '__main__':
