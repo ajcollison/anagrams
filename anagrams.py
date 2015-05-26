@@ -154,6 +154,9 @@ def _main():
     for alist in filter_anagrams(anagrams, match_word_length=args.nomatch):
         print(", ".join(sorted(list(alist))).rstrip())
 
+    # will be closed at end of execution anyway, but let's not be sloppy
+    handle.close()
+
 
 if __name__ == '__main__':
 
