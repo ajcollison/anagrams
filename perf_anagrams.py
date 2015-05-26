@@ -29,8 +29,8 @@ def test_collect_anagrams(max_count):
     """Run the `anagrams.collect_anagrams` function on the source data."""
 
     source = open('/usr/share/dict/words')
-
     collect_anagrams(trimmed_source(source, max_count))
+    source.close()
 
 
 def _main():
