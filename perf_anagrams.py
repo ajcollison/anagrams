@@ -45,6 +45,10 @@ def _main():
                                    number=repeat,
                                    setup="from __main__ import test_collect_anagrams"))
 
+    print("Word Count\t\tTime")
+    for count, time in zip(counts, times):
+        print("    {0:6}\t\t{1:2.2f}".format(count, time))
+
     if numpy:
         xcoord = numpy.array([count / 25000. for count in counts])
         ycoord = numpy.array(times)
@@ -59,10 +63,6 @@ def _main():
             pyplot.ylabel("Execution Time")
             pyplot.plot(xcoord, ycoord, '.', plotx, poly(plotx), '-')
             pyplot.show()
-    else:
-        print("Word Count\t\tTime")
-        for count, time in zip(counts, times):
-            print("    {0:6}\t\t{1:2.2f}".format(count, time))
 
 
 if __name__ == '__main__':
