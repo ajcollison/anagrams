@@ -96,8 +96,8 @@ def filter_anagrams(anagrams, match_word_length=False):
         A generator with one anagram `set` returned at a time.
     """
 
-    for key, alist in anagrams.items():
-        if len(alist) < 2 or (match_word_length and (len(alist) < len(key))):
+    for alist in anagrams.values():
+        if len(alist) < 2 or (match_word_length and (len(alist) < len(next(iter(alist))))):
             continue
         yield alist
 
