@@ -10,7 +10,7 @@ class BasicAnagramsTestCase(TestCase):
 
     def setUp(self):
         self.snowman = b'a\xE2\x98\x83'.decode('utf-8', 'strict')
-        self.raw_data = ['levo', 'mila', 'egol', 'amil',
+        self.raw_data = ['levo', 'mila', 'egol', 'Amil',
                          'align', 'vole', 'velo', 'amli',
                          'mail', 'loge', 'goel', 'love',
                          'mali', 'a', 'it', 'asteer', 'saeter',
