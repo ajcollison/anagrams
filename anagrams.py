@@ -71,7 +71,7 @@ def collect_anagrams(source, min_word_length=2):
     anagrams = defaultdict(set)  # `set` b/c words may be repeated in source
 
     for entry in source:
-        word = entry.strip()  # we are expecting one word per line
+        word = entry.strip().lower()  # we are expecting one word per line
         if len(word) < min_word_length:
             continue
 
